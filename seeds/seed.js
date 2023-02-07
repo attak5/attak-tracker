@@ -13,17 +13,18 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  const exercise = await Exercise.bulkCreate(exerciseData, {
+  const exercises = await Exercise.bulkCreate(exerciseData, {
     individualHooks: true,
     returning: true,
   });
 
   for (const workout of workoutData) {
-    await Workout.create({
+    const wk = await Workout.create({
       ...workout,
       user_id: users[Math.floor(Math.random() * users.length)].id,
-      exercise_id: 1,
     });
+    await wk.addExercise(exercises[0], { through: { selfGranted: false } });
+    await wk.addExercise(exercises[1], { through: { selfGranted: false } });
   }
 
   process.exit(0);
