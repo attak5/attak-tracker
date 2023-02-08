@@ -1,11 +1,12 @@
 <!-- Loop over each object in the projects array -->
-{{#each exercises as |exercise| }}
+
+{{#each workouts as |workout| }}
 <div class="row mb-4 project">
   <div class="col-md-5">
     <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
     
-      <a href="/exercise/{{exercise.id}}">{{exercise.name}}</a>
+      <a href="/exercise/{{workout.id}}">{{workout.name}}</a>
     </h2>
     
   </div>
@@ -15,3 +16,4 @@
 </div>
 {{/each}}
 This is the homepage for real this time
+name: {{name}}
