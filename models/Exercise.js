@@ -15,6 +15,10 @@ Exercise.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    muscle: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    }
   },
   {
     sequelize,

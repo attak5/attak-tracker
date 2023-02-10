@@ -1,8 +1,72 @@
 [
-    {
-      "name": "Exercise 1"    },
-    {
-      "name": "Exercise 2"    },
-    {
-      "name": "Exercise 3"    }
-  ]
+  {
+    "name": "Rows",
+    "muscle": "back"
+  },
+
+  { "name": "Hyper Extension", "muscle": "back" },
+
+  { "name": "Deadlift", "muscle": "back" },
+
+  { "name": "Bench Press", "muscle": "chest" },
+
+  { "name": "Close Grip Pushup", "muscle": "chest" },
+
+  { "name": "Dumbell Incline Press", "muscle": "chest" },
+
+  {
+    "name": "Hand-Squeeze",
+    "muscle": "Arms"
+  },
+  {
+    "name": "Tricep Extension",
+    "muscle": "Arms"
+  },
+  {
+    "name": "Preacher Curls",
+    "muscle": "Arms"
+  },
+  {
+    "name": "Sprints",
+    "muscle": "Heart"
+  },
+  {
+    "name": "Burpees",
+    "muscle": "Heart"
+  },
+
+  {
+    "name": "Crunches",
+    "muscle": "Core"
+  },
+  {
+    "name": "Planks",
+    "muscle": "Core"
+  },
+  {
+    "name": "Bird Dog",
+    "muscle": "Core"
+  },
+
+  {
+    "name": "Squats",
+    "muscle": "Legs"
+  },
+  {
+    "name": "Toe Curls",
+    "muscle": "Legs"
+  },
+  {
+    "name": "Leg Lift",
+    "muscle": "Legs"
+  },
+
+  {
+    "name": "Elliptical",
+    "muscle": "Heart"
+  },
+  {
+    "name": "Swim",
+    "muscle": "Heart"
+  }
+]
