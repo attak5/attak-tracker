@@ -2,7 +2,8 @@
 // ask for workout name, description, and checkboxes of all exercises that they want
 // send name and description to back-end and an array of exercises. Loops through the exercise array and adds it as we did in the seed.
 const router = require('express').Router();
-const { Workout } = require('../../models');
+const { Op } = require('sequelize');
+const { Workout, Exercise } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
@@ -10,6 +11,16 @@ router.post('/', withAuth, async (req, res) => {
     const newWorkout = await Workout.create({
       ...req.body,
       user_id: req.session.user_id,
+    });
+    const exercises = await Exercise.findAll({
+      where: {
+        id: {
+          [Op.or]: req.body.exercises,
+        },
+      },
+    });
+    await newWorkout.addExercise(exercises, {
+      through: { selfGranted: false },
     });
 
     res.status(200).json(newWorkout);

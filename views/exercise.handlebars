@@ -1,0 +1,17 @@
+<form class="new-workout-form" action="/workouts" method="post">
+  <div>
+    <label for="workoutName">Workout Name:</label>
+    <input type="text" name="workoutName" id="workoutName">
+  </div>
+  <div>
+    <h3>Exercises:</h3>
+    {{#each exercises}}
+      <div>
+        <input type="checkbox" name="exerciseIds" value="{{this.id}}"> {{this.name}}
+      </div>
+    {{/each}}
+  </div>
+  <button type="submit">Create Workout</button>
+</form>
+
+<script src="./js/exercise.js"></script>

@@ -13,7 +13,7 @@ router.get('/exercise', async (req, res) => {
     );
 
     // Pass serialized data and session flag into template
-    res.render('homepage', {
+    res.render('exercise', {
       exercises,
       logged_in: req.session.logged_in,
     });
@@ -44,7 +44,6 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
-
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
