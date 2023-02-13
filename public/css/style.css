@@ -24,7 +24,11 @@
 } */
 
 html {
-  height: 80%;
+  height: 100%;
+
+}
+
+body {
   background-image: url('../css/assets/AttakTracker-logos.jpeg');
   background-color: #f3d503;
 
