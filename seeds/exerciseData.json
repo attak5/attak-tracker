@@ -1,72 +1,49 @@
 [
-  {
-    "name": "Rows",
-    "muscle": "back"
-  },
+  {"name": "Rows", "muscle": "back"},
+  {"name": "Seated Rows", "muscle": "back"},
+  {"name": "Hyper Extension", "muscle": "back" },
+  {"name": "Seated Pulldown", "muscle": "back" },
+  {"name": "Reverse Fly", "muscle": "back" },
+  {"name": "Deadlift", "muscle": "back" },
+  {"name": "RDL", "muscle": "back" },
 
-  { "name": "Hyper Extension", "muscle": "back" },
+  {"name": "Bench Press", "muscle": "chest" },
+  {"name": "Close Grip Pushup", "muscle": "chest" },
+  {"name": "Dumbell Incline Press", "muscle": "chest" },
+  {"name": "Dumbell Decline Press", "muscle": "chest" },
+  {"name": "Neutral Grip Chest Press", "muscle": "chest" },
+  {"name": "Dumbell Fly", "muscle": "chest"},
+  {"name": "Push Ups", "muscle": "chest"},
 
-  { "name": "Deadlift", "muscle": "back" },
+  {"name": "Hand-Squeeze", "muscle": "arms"},
+  {"name": "Tricep Extension", "muscle": "arms"},
+  {"name": "Preacher Curls", "muscle": "arms"},
+  {"name": "Bicep Curls", "muscle": "arms" },
+  {"name": "Tricep Pulldowns", "muscle": "arms" },
+  {"name": "Shoulder Press", "muscle": "arms" },
+  {"name": "Upright Rows", "muscle": "arms" },
 
-  { "name": "Bench Press", "muscle": "chest" },
+  {"name": "Crunches", "muscle": "core"},
+  {"name": "Planks", "muscle": "core"},
+  {"name": "Bird Dog", "muscle": "core"},
+  {"name": "V-ups", "muscle": "core"},
+  {"name": "Sit ups", "muscle": "core"},
+  {"name": "Russian Twists", "muscle": "core"},
+  {"name": "Scissor Kicks", "muscle": "core"},
 
-  { "name": "Close Grip Pushup", "muscle": "chest" },
+  {"name": "Squats", "muscle": "legs"},
+  {"name": "Hamstring Curls", "muscle": "legs"},
+  {"name": "Toe Curls", "muscle": "legs"},
+  {"name": "Calf Raises", "muscle": "legs"},
+  {"name": "Leg Extensions", "muscle": "legs"},
+  {"name": "Goblet Squats", "muscle": "legs"},
+  {"name": "Single Leg Squats", "muscle": "legs"},
 
-  { "name": "Dumbell Incline Press", "muscle": "chest" },
-
-  {
-    "name": "Hand-Squeeze",
-    "muscle": "Arms"
-  },
-  {
-    "name": "Tricep Extension",
-    "muscle": "Arms"
-  },
-  {
-    "name": "Preacher Curls",
-    "muscle": "Arms"
-  },
-  {
-    "name": "Sprints",
-    "muscle": "Heart"
-  },
-  {
-    "name": "Burpees",
-    "muscle": "Heart"
-  },
-
-  {
-    "name": "Crunches",
-    "muscle": "Core"
-  },
-  {
-    "name": "Planks",
-    "muscle": "Core"
-  },
-  {
-    "name": "Bird Dog",
-    "muscle": "Core"
-  },
-
-  {
-    "name": "Squats",
-    "muscle": "Legs"
-  },
-  {
-    "name": "Toe Curls",
-    "muscle": "Legs"
-  },
-  {
-    "name": "Leg Lift",
-    "muscle": "Legs"
-  },
-
-  {
-    "name": "Elliptical",
-    "muscle": "Heart"
-  },
-  {
-    "name": "Swim",
-    "muscle": "Heart"
-  }
+  {"name": "Elliptical", "muscle": "heart"},
+  {"name": "Run", "muscle": "heart"},
+  {"name": "Swim", "muscle": "heart"},
+  {"name": "Sprints", "muscle": "heart"},
+  {"name": "Burpees", "muscle": "heart"},
+  {"name": "Treadmill", "muscle": "heart"},
+  {"name": "Stairmaster", "muscle": "heart"}
 ]
