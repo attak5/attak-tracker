@@ -2,6 +2,7 @@ const newFormHandler = async (event) => {
   event.preventDefault();
   const exercises = [];
   const name = document.querySelector('#workoutName').value.trim();
+  const description = document.querySelector('#description').value.trim();
   const exerciseIds = document.querySelectorAll(
     'input[type=checkbox]:checked'
   );
@@ -9,7 +10,7 @@ const newFormHandler = async (event) => {
 
   const response = await fetch(`/api/workouts`, {
     method: 'POST',
-    body: JSON.stringify({ name, exercises }),
+    body: JSON.stringify({ name, description, exercises }),
     headers: {
       'Content-Type': 'application/json',
     },
