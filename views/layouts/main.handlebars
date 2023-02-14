@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fund My Project!</title>
+  <title>Attak Tracker</title>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
@@ -15,57 +15,57 @@
 </head>
 <body>
   
-{{!-- <body class="bg-yellow-400"> --}}
   {{#if logged_in}}
     <span
       class="absolute text-white text-4xl top-5 left-4 cursor-pointer"
       onclick="openSidebar()"
     >
-      <i class="bi bi-filter-left px-2 bg-gray-900 rounded-md"></i>
+      <i class="bi bi-filter-left px-2 bg-gray-900 rounded-md icon-yellow"></i>
     </span>
     <div
-      class="sidebar fixed top-0 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto text-center bg-gray-900 hidden"
+      class="sidebar fixed top-0 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto text-center bg-gray-900  hidden"
     >
       <div class="text-gray-100 text-xl">
         <div class="p-2.5 mt-1 flex items-center">
-          <h1 class="font-bold text-gray-200 text-[15px] ml-3">Attak Tracker</h1>
+          <h1 class="font-bold text-yellow text-[15px] ml-3">Attak Tracker</h1>
           <i
-            class="bi bi-x cursor-pointer ml-28"
+            class="bi bi-x cursor-pointer ml-28 icon-yellow"
             onclick="openSidebar()"
           ></i>
         </div>
         <div class="my-2 bg-gray-600 h-[1px]"></div>
       </div>
       <div
-        class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-yellow-500 text-white"
+        class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-gray-600 text-white"
       >
-        <i class="bi bi-chevron-compact-right"></i>
+        <i class="bi bi-chevron-compact-right icon-yellow"></i>
         
-        <span class="text-[15px] ml-4 text-gray-200 font-bold">
+        <span class="text-[15px] ml-4 text-yellow font-bold">
           <a href="/">
           Homepage</a></span>
       </div>
       <div
-        class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-yellow-400 text-white">
-        <i class="bi bi-chevron-compact-right"></i>
-        <span class="text-[15px] ml-4 text-gray-200 font-bold">
+        class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-gray-600 text-white">
+        <i class="bi bi-chevron-compact-right icon-yellow"></i>
+        <span class="text-[15px] ml-4 text-yellow font-bold">
           <a href="/exercise">
           Exercises</a></span>
       </div>
       <div class="my-4 bg-gray-600 h-[1px]"></div>
       <div
-        class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-yellow-400 text-white">
-        <i class="bi bi-chevron-compact-right"></i>
+        class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-gray-600 text-white">
+        <i class="bi bi-chevron-compact-right icon-yellow"></i>
         <div class="flex justify-between w-full items-center">
-          <span class="text-[15px] ml-4 text-gray-200 font-bold">Workouts</span>
+          <span class="text-[15px] ml-4 text-yellow font-bold"><a href="/workout">
+            Workouts</a></span>
         </div>
       </div>
       <div
-        class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-yellow-400 text-white"
+        class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-gray-600 text-white"
       >
-        <i class="bi bi-box-arrow-in-right"></i>
+        <i class="bi bi-box-arrow-in-right icon-yellow"></i>
         <span 
-       id="logout" class="text-[15px] ml-4 text-gray-200 font-bold">
+       id="logout" class="text-[15px] ml-4 text-yellow font-bold">
           
           Logout</span>
       </div>

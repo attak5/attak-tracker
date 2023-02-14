@@ -51,7 +51,7 @@
   { "name": "Leg Press", "muscle": "legs" },
   { "name": "Lunges", "muscle": "legs" },
   { "name": "Hip Adductors", "muscle": "legs" },
-  { "name": "Hip Abductors", "muscle": "legs" },
+
 
   { "name": "Elliptical", "muscle": "heart" },
   { "name": "Run", "muscle": "heart" },

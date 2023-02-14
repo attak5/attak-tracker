@@ -1,11 +1,20 @@
-<div>
+<div id="workoutBg">
 <title>Title</title>
 <div>description</div>
 <ul>Exercises
 <li>exercise 1</li> 
 <li>exercise2</li>
 
-</ul>
+ {{#each workouts}}
+      <div>
+{{this.name}}
+{{this.description}}
+
+      </div>
+    {{/each}}
+name:
+    {{name}}
+
 
 
 

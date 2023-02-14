@@ -51,13 +51,16 @@ router.get('/exercise', withAuth, async (req, res) => {
 
 router.get('/workout', withAuth, async (req, res) => {
   try {
-    const workoutData = await User.findByPk(3, {
-      include: [{}],
+    const workoutData = await User.findByPk(req.session.user_id, {
+      include: [{
+        model: Workout
+      }],
     });
 
-    const user = userData.get({ plain: true });
+    const user = workoutData.get({ plain: true });
+    console.log(user)
 
-    res.render('workout', {
+    res.render('workouts', {
       ...user,
       logged_in: req.session.logged_in,
     });
