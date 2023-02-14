@@ -8,8 +8,11 @@ const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
   try {
+    const { name, description } = req.body;
     const newWorkout = await Workout.create({
-      ...req.body,
+      // ...req.body,
+      name,
+      description,
       user_id: req.session.user_id,
     });
     const exercises = await Exercise.findAll({
