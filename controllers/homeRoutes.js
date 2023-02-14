@@ -24,17 +24,39 @@ router.get('/exercise', withAuth, async (req, res) => {
 
 router.get('/profile', withAuth, async (req, res) => {
   try {
-    // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-      include: [{ model: Project }],
+    const userData = await User.findByPk(3, {
+      include: [
+        {
+       
+        },
+      ],
     });
 
     const user = userData.get({ plain: true });
 
     res.render('profile', {
       ...user,
-      logged_in: true
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/', withAuth, async (req, res) => {
+  try {
+    // Get all projects and JOIN with user data
+    const exerciseData = await Exercise.findAll();
+
+    // Serialize data so the template can read it
+    const exercises = exerciseData.map((exercise) =>
+      exercise.get({ plain: true })
+    );
+
+    // Pass serialized data and session flag into template
+    res.render('exercise', {
+      exercises,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
