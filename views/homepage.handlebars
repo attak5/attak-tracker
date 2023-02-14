@@ -1,19 +1,5 @@
-
-{{#each workouts as |workout| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-    
-      <a href="/exercise/{{workout.id}}">{{workout.name}}</a>
-    </h2>
-    
-  </div>
-  <div class="col-md-7">
-    This is the homepage
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
   </div>
 </div>
-{{/each}}
-This is the homepage for real this time
-name: {{name}}
-

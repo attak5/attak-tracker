@@ -25,11 +25,7 @@ router.get('/exercise', withAuth, async (req, res) => {
 router.get('/profile', withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(3, {
-      include: [
-        {
-       
-        },
-      ],
+      include: [{}],
     });
 
     const user = userData.get({ plain: true });
@@ -43,25 +39,25 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
-router.get('/', withAuth, async (req, res) => {
-  try {
-    // Get all projects and JOIN with user data
-    const exerciseData = await Exercise.findAll();
+// router.get('/', withAuth, async (req, res) => {
+//   try {
+//     // Get all projects and JOIN with user data
+//     const exerciseData = await Exercise.findAll();
 
-    // Serialize data so the template can read it
-    const exercises = exerciseData.map((exercise) =>
-      exercise.get({ plain: true })
-    );
+//     // Serialize data so the template can read it
+//     const exercises = exerciseData.map((exercise) =>
+//       exercise.get({ plain: true })
+//     );
 
-    // Pass serialized data and session flag into template
-    res.render('exercise', {
-      exercises,
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     // Pass serialized data and session flag into template
+//     res.render('homepage', {
+//       exercises,
+//       logged_in: req.session.logged_in,
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 router.get('/', withAuth, async (req, res) => {
   try {
