@@ -8,14 +8,21 @@
  {{#each workouts}}
       <div>
 {{this.name}}
+<button data-id="{{this.id}}" id="delete">delete</button>
 {{this.description}}
 
+
+{{#each exercises}}
+<div>
+    exercise: {{this.name}}
+</div>
+{{/each}}
       </div>
     {{/each}}
 name:
     {{name}}
 
 
-
-
 </div>
+
+<script src="./js/workout.js"></script>
