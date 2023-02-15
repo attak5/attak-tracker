@@ -1,24 +1,25 @@
 <form id="exerciseBg" class="new-workout-form" action="/workouts" method="post">
-<div class="flex-row">
+<div class="flex-row justify-space-around align-items-center">
   <div>
-    <label for="workoutName">Workout Name:</label>
+    <label for="workoutName" class="b-2 text-3xl font-bold text-gray-900">Workout Name:</label>
     <input type="text" name="workoutName" id="workoutName">
   </div>
   <div>
-<label for="description">Description:</label>
+<label for="description" class="b-2 text-3xl font-bold text-gray-900">Description:</label>
     <input type="text" name="description" id="description">
   </div>
-      <button type="submit">Create Workout</button>
+      <button type="submit" type="button" class=" inline-block px-6 py-4 bg-gray-900 text-yellow font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-600 hover focus:bg-gray-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-lg transition duration-150 ease-in-out">Create Workout</button>
 </div>
   
   
- <div class="container grid grid-cols-6">
-    {{!-- <h3>Exercises:</h3> --}}
+ <div class="container flex">
 
-<div class="item-1">
-    <h2 class="mb-2 text-3xl font-bold text-gray-900">Arms</h2>
-    {{#each armData}}
-      <div>
+
+<div class="flex justify-center">
+  <div class="block p-6 rounded-lg exerciseBg max-w-sm">
+    <h5 class="b-2 text-3xl font-bold text-gray-900">ARMS</h5>
+        {{#each armData}}
+      <div class="text-gray-700 text-base mb-4">
 
 <div class="flex-wrap items-center mb-4">
     <input id="default-checkbox" type="checkbox" value="{{this.id}}" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"> 
@@ -26,74 +27,85 @@
 </div>
 </div>
 {{/each}}
+  </div>
 </div>
 
+<div class="flex justify-center">
+  <div class="block p-6 rounded-lg exerciseBg max-w-sm">
+    <h5 class="tb-2 text-3xl font-bold text-gray-900">BACK</h5>
+        {{#each backData}}
+      <div class="text-gray-700 text-base mb-4">
 
-<div class="item-2">
-    <h2 class="mb-2 text-3xl font-bold text-gray-900" >Back</h2>
-    {{#each backData}}
-      <div>
-
-<div class="flex items-center mb-4">
+<div class="flex-wrap items-center mb-4">
     <input id="default-checkbox" type="checkbox" value="{{this.id}}" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"> 
     <label for="default-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">{{this.name}}</label>
 </div>
-      </div>
-    {{/each}}
+</div>
+{{/each}}
+  </div>
 </div>
 
-<div class="item-3">
-        <h2 class="mb-2 text-3xl font-bold text-gray-900">Core</h2>
-    {{#each coreData}}
-      <div>
+<div class="flex justify-center">
+  <div class="block p-6 rounded-lg exerciseBg max-w-sm">
+    <h5 class="b-2 text-3xl font-bold text-gray-900">CORE</h5>
+        {{#each coreData}}
+      <div class="text-gray-700 text-base mb-4">
 
-<div class="flex items-center mb-4">
+<div class="flex-wrap items-center mb-4">
     <input id="default-checkbox" type="checkbox" value="{{this.id}}" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"> 
     <label for="default-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">{{this.name}}</label>
 </div>
-      </div>
-    {{/each}}
+</div>
+{{/each}}
+  </div>
 </div>
 
-<div class="item-4">
-    <h2 class="mb-2 text-3xl font-bold text-gray-900">Chest</h2>
-    {{#each chestData}}
-      <div>
+<div class="flex justify-center">
+  <div class="block p-6 rounded-lg exerciseBg max-w-sm">
+    <h5 class="b-2 text-3xl font-bold text-gray-900">CHEST</h5>
+        {{#each chestData}}
+      <div class="text-gray-700 text-base mb-4">
 
-<div class="flex items-center mb-4">
+<div class="flex-wrap items-center mb-4">
     <input id="default-checkbox" type="checkbox" value="{{this.id}}" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"> 
     <label for="default-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">{{this.name}}</label>
 </div>
-      </div>
-    {{/each}}
+</div>
+{{/each}}
+  </div>
 </div>
 
-<div class="item-5">
-        <h2 class="mb-2 text-3xl font-bold text-gray-900">Legs</h2>
-    {{#each legsData}}
-      <div>
+<div class="flex justify-center">
+  <div class="block p-6 rounded-lg exerciseBg max-w-sm">
+    <h5 class="b-2 text-3xl font-bold text-gray-900">LEGS</h5>
+        {{#each legsData}}
+      <div class="text-gray-700 text-base mb-4">
 
-<div class="flex items-center mb-4">
+<div class="flex-wrap items-center mb-4">
     <input id="default-checkbox" type="checkbox" value="{{this.id}}" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"> 
     <label for="default-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">{{this.name}}</label>
 </div>
-      </div>
-    {{/each}}
+</div>
+{{/each}}
+  </div>
 </div>
 
-<div class="item-6">
-        <h2 class="mb-2 text-3xl font-bold text-gray-900">Heart</h2>
-    {{#each heartData}}
-      <div>
+<div class="flex justify-center">
+  <div class="block p-6 rounded-lg exerciseBg max-w-sm">
+    <h5 class="b-2 text-3xl font-bold text-gray-900">HEART</h5>
+        {{#each heartData}}
+      <div class="text-gray-700 text-base mb-4">
 
-<div class="flex items-center mb-4">
+<div class="flex-wrap items-center mb-4">
     <input id="default-checkbox" type="checkbox" value="{{this.id}}" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"> 
     <label for="default-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">{{this.name}}</label>
 </div>
-      </div>
-    {{/each}}
 </div>
+{{/each}}
+  </div>
 </div>
+
+
 
   
 </form>
