@@ -3,11 +3,12 @@ const newFormHandler = async (event) => {
   const exercises = [];
   const name = document.querySelector('#workoutName').value.trim();
   const description = document.querySelector('#description').value.trim();
-  const exerciseIds = document.querySelectorAll(
-    'input[type=checkbox]:checked'
-  );
+  const exerciseIds = document.querySelectorAll('input[type=checkbox]:checked');
   exerciseIds.forEach((id) => exercises.push(id.value));
-
+  if (exercises.length === 0) {
+    document.location.replace('/exercise');
+    return;
+  }
   const response = await fetch(`/api/workouts`, {
     method: 'POST',
     body: JSON.stringify({ name, description, exercises }),
@@ -19,7 +20,7 @@ const newFormHandler = async (event) => {
   if (response.ok) {
     document.location.replace('/workout');
   } else {
-    alert('Failed to create project');
+    alert('Failed to create workout');
   }
 };
 

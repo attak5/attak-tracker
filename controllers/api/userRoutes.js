@@ -39,10 +39,9 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-      
+
       res.json({ user: userData, message: 'You are now logged in!' });
     });
-
   } catch (err) {
     res.status(400).json(err);
   }
@@ -53,6 +52,10 @@ router.post('/signup', async (req, res) => {
     const newUser = await User.create({
       username: req.body.username,
       email: req.body.email,
+      img: req.body.img,
+      height: req.body.height,
+      weight: req.body.weight,
+      goals: req.body.goals,
       password: req.body.password,
     });
 
@@ -66,13 +69,6 @@ router.post('/signup', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-
-
-
-
-
-
 
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
