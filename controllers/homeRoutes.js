@@ -60,8 +60,7 @@ router.get('/workout', withAuth, async (req, res) => {
     });
 
     const user = workoutData.get({ plain: true });
-    console.log(user.workouts[0].exercises);
-
+    
     res.render('workouts', {
       ...user,
       logged_in: req.session.logged_in,
