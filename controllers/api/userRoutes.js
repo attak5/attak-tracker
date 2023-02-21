@@ -1,7 +1,7 @@
-const router = require('express').Router();
-const { User } = require('../../models');
+const router = require('express').Router(); //import express model
+const { User } = require('../../models'); //import all models
 
-router.post('/', async (req, res) => {
+router.post('/', async (req, res) => { //currently logged in - homepage
   try {
     const userData = await User.create(req.body);
 
@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.post('/login', async (req, res) => {
+router.post('/login', async (req, res) => { //user is able to log in
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
 
@@ -47,7 +47,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.post('/signup', async (req, res) => {
+router.post('/signup', async (req, res) => { //creating a new user
   try {
     const newUser = await User.create({
       username: req.body.username,
@@ -70,7 +70,7 @@ router.post('/signup', async (req, res) => {
   }
 });
 
-router.post('/logout', (req, res) => {
+router.post('/logout', (req, res) => { //log out 
   if (req.session.logged_in) {
     req.session.destroy(() => {
       res.status(204).end();

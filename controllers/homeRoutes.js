@@ -1,8 +1,9 @@
-const router = require('express').Router();
-const { Workout, Exercise, User } = require('../models');
+const router = require('express').Router(); //import express router
+const { Workout, Exercise, User } = require('../models'); //import all models
 const withAuth = require('../utils/auth');
 
 router.get('/exercise', withAuth, async (req, res) => {
+  //get all exercises
   try {
     // Get all projects and JOIN with user data
     const exerciseData = await Exercise.findAll();
@@ -49,19 +50,22 @@ router.get('/exercise', withAuth, async (req, res) => {
 });
 
 router.get('/workout', withAuth, async (req, res) => {
+  //route for workout page
   try {
     const workoutData = await User.findByPk(req.session.user_id, {
+      //finds all workouts associated with user
       include: [
         {
           model: Workout,
-          include: { model: Exercise, require: false },
+          include: { model: Exercise, require: false }, //connects exercises to workouts
         },
       ],
     });
 
     const user = workoutData.get({ plain: true });
-    
+
     res.render('workouts', {
+      //renders the workout handlebars page
       ...user,
       logged_in: req.session.logged_in,
     });
@@ -72,7 +76,7 @@ router.get('/workout', withAuth, async (req, res) => {
 
 router.get('/', withAuth, async (req, res) => {
   try {
-    const userData = await User.findByPk(req.session.user_id, {
+    const userData = await User.findByPk(req.session.user_id, { //renders the homepage
       include: [
         {
           model: Workout,
