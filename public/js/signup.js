@@ -1,6 +1,8 @@
+// created signup.js and signup.handlebars to create signup form and save values for users
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
+  // Get values for signup form 
   const name = document.querySelector('#name-signup').value.trim();
   const img = document.querySelector('#img-signup').value.trim();
   const height = document.querySelector('#height-signup').value.trim();
@@ -10,6 +12,7 @@ const signupFormHandler = async (event) => {
   const password = document.querySelector('#password-signup').value.trim();
 
   if (name && email && password) {
+    // Send Post Request to API endpoint
     const response = await fetch('/api/users', {
       method: 'POST',
       body: JSON.stringify({
@@ -23,7 +26,7 @@ const signupFormHandler = async (event) => {
       }),
       headers: { 'Content-Type': 'application/json' },
     });
-
+    // If successful, redirect the browser to the profile page
     if (response.ok) {
       document.location.replace('/');
     } else {
@@ -31,7 +34,7 @@ const signupFormHandler = async (event) => {
     }
   }
 };
-
+// methods and event listeners
 document
   .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
