@@ -7,7 +7,7 @@ class User extends Model {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
-
+// builds table for user data in SQL
 User.init(
   {
     id: {

@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Exercise extends Model {}
-
+// builds exercise table in SQL
 Exercise.init(
   {
     id: {
