@@ -5,6 +5,7 @@ const newFormHandler = async (event) => {
   const description = document.querySelector('#description').value.trim();
   const exerciseIds = document.querySelectorAll('input[type=checkbox]:checked');
   exerciseIds.forEach((id) => exercises.push(id.value));
+  // pushes user selected exercises into empty array to create workout
   if (exercises.length === 0) {
     document.location.replace('/exercise');
     return;
