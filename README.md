@@ -47,7 +47,7 @@ View you live site at [`http://localhost:3000`](http://localhost:3000)
 GIVEN a fittness tracker app
 
 - [x] WHEN I visit the site for the first time
-- [x] THEN I am presented with the homepage, which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
+- [x] THEN I am presented with the homepage, which includes existing workout if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
 - [x] WHEN I click on the homepage option
 - [x] THEN I am taken to the homepage
 - [x] WHEN I click on any other links in the navigation
