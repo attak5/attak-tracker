@@ -10,25 +10,9 @@ Home page - (logged in)
 
 ![LoggedInHome](https://github.com/attak5/attak-tracker/blob/main/public/css/assets/HomePage.png)
 
-Dashboard page - without workouts(accesible when logged in)
-
-![Dashboard]()
-
-Dashboard page - with workouts(accesible when logged in)
-
-![Posts]()
-
-Login page
-
-![Login]()
-
 Signup page
 
-![Signup]()
-
-Createworkout page(accesible when logged in)
-
-![workout]()
+![Signup](https://github.com/attak5/attak-tracker/blob/main/public/css/assets/SignUp%20Page.png)
 
 ## Description
 
