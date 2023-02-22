@@ -2,13 +2,13 @@
 
 ## Overview
 
-Home page - (not logged in)
+Logo
 
 ![Home](AttakTracker-logos.jpeg)
 
 Home page - (logged in)
 
-![LoggedInHome]()
+![LoggedInHome](https://github.com/attak5/attak-tracker/blob/main/public/css/assets/HomePage.png)
 
 Dashboard page - without workouts(accesible when logged in)
 
