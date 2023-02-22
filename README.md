@@ -24,7 +24,7 @@ Real-world full stack application
 * Application is backed by a MySQL database with a Sequelize ORM and protects API keys and sensitive information with environment variables.
 * Application includes user authentication (express-session and cookies).
 
-View you live site at [`http://localhost:3000`](http://localhost:3000)
+View you live site at [`http://localhost:3000`](https://attak-tracker.herokuapp.com/login)
 
 ## The attack tracker aims to achieve the following:
 
